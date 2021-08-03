@@ -15,19 +15,18 @@ Descripcion del proyecto:
 				El sistema trata de llevar un mejor control de las fases de creación de una mueble,
 está dividida por los siguientes módulos: 
 1-Venta: este modulo fue diseñado para recibir y mostrar la información de las órdenes de servicio, solicitud de servicio,
+cotización, precio de venta, orden de trabajo y cotización proveedor
 
-2-cotización, precio de venta, orden de trabajo y cotización proveedor
-
-3-Producción: este módulo se encarga de mostrar la información del mueble a crear en el taller de la empresa y calcular
+2-Producción: este módulo se encarga de mostrar la información del mueble a crear en el taller de la empresa y calcular
 la mano de obra 
 
-4-Calidad: se verifica la calidad por parte del cliente y de la empresa.
+3-Calidad: se verifica la calidad por parte del cliente y de la empresa.
 
-5-Logistica: trata del transporte e instalación del mueble
+4-Logistica: trata de verificar la dirección y de ver el estado del transporte e instalación del mueble
 
-6-Garantía: muestra la garantía de los muebles y se verifica si cumple o no con alguna garantía que pide el cliente
+5-Garantía: muestra el tiempo de la garantía de los muebles y se verifica si cumple o no con alguna garantía que pide el cliente
 
-7-Inventario: Esta muestra el inventario de los materiales y el personal que tiene la empresa, se pueden agregar, eliminar o actualizar
+6-Inventario: Esta muestra el inventario de los materiales y el personal que tiene la empresa, se pueden agregar, eliminar o actualizar
 
 
 
