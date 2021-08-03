@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+
+    <ui:define name="content">
+        <main id="mainRealizarCoti">
+
+            <form action="" method="post">
+
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Cotizar</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item">
+                            <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/SCFM/faces/ventas/Cotizacion.xhtml">Cotización</a>
+                        </li>
+                        <li class="breadcrumb-item active">Realizar Cotización</li>
+                    </ol>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="col-4">
+                                <label for="SoliServi_Cot" class="control-label">Solicitud de Servicio</label>
+                                <select class="form-control" id="SoliServi_Cot">
+                                    <option selected="selected">Seleccionar</option>
+                                    <option value="1">SS-205</option>
+                                    <option value="2">SS-377</option>
+                                    <option value="3">SS-398</option>
+                                </select>
+                            </div>
+                            <span style="float: right;">
+                                <button class="btn btn-success btn-sm" id="btnRegistrar">Registrar Material</button>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-7 col-md-8 col-sm-7 col-12">
+                                    <label for="txtMaterial">Material Nuevo</label>
+                                    <input
+                                        type="text"
+                                        id="txtMaterial"
+                                        class="form-control"
+                                        placeholder="Nombre del material"/>
+                                </div>
+                                <div class="col-xl-5 col-lg-5 col-md-4 col-sm-5 col-12">
+                                    <label for="txtPrecio">Precio</label>
+                                    <input
+                                        type="text"
+                                        id="txtPrecio"
+                                        class="form-control"
+                                        placeholder="Precio del material"/>
+                                </div>
+                            </div>
+                            <br></br>
+                            <br></br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Listar</th>
+                                                    <th>Material</th>
+                                                    <th>Cantidad</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ListaMateriales">
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input type="checkbox" class="form-check-input" id="txtindices"/>
+                                                        </div>
+                                                    </td>
+                                                    <td>Melanina</td>
+                                                    <td>
+                                                        <div class="col-4">
+                                                            <div class="form-group">
+                                                                <input
+                                                                    type="number"
+                                                                    class="form-control"
+                                                                    id="Cant_Mater_Listar"
+                                                                    placeholder="0"/>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check form-switch">
+                                                            <input type="checkbox" class="form-check-input" id="txtindices"/>
+                                                        </div>
+                                                    </td>
+                                                    <td>Melanina</td>
+                                                    <td>
+                                                        <div class="col-4">
+                                                            <div class="form-group">
+                                                                <input
+                                                                    type="number"
+                                                                    class="form-control"
+                                                                    id="Cant_Mater_Listar"
+                                                                    placeholder="0"/>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="car-footer">
+                                
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" id="btnListar">Listar Materiales</button>
+                                    </div>
+                                
+                                <br></br>
+                                <br></br>
+                                <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-hover nowrap">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th>Material</th>
+                                                <th>Cantidad</th>
+                                                <th>Opción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="MaterialesListados"></tbody>
+                                    </table>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="CostoTransp" class="control-label">Precio Transporte</label>
+                                        <input type="text" class="form-control" id="CostoTransp" placeholder="Opcional"/>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="CostoInstal" class="control-label">Precio Instalación</label>
+                                        <input type="text" class="form-control" id="CostoInstal" placeholder="Opcional"/>
+                                    </div>
+                                </div>
+                                    </div>
+
+
+
+                                <br></br>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-4">
+                                            <button type="submit" class="btn btn-primary">Calcular Cotización</button>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="TotalCoti" class="control-label">Total</label>
+                                            <input type="text" class="form-control" id="TotalCoti" placeholder="150000"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </main>
+
+    </ui:define>
+
+</ui:composition>

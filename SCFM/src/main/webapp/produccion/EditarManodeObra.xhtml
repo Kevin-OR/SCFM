@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+    <ui:define name="content">
+        <main>
+            <form>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Editar mano de obra</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/SCFM/faces/inicio.html">Inicio</a></li>
+                            <li class="breadcrumb-item active">Editar mano de Obra</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <button>Cronograma</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <p>Empleados: 
+                                            <select name="empleados">
+                                              <option>Empleado 1</option>
+                                              <option>Empleado 2</option>
+                                              <option>Empleado 3</option>
+                                              <option>Empleado 4</option>
+                                            </select>
+                                         </p>
+                                        <br></br>
+                                         
+                                          </div>
+                                    <br></br>
+                                          <div class="col-4">
+                                            <label for="HorasNormalesMO" class="control-label">Horas Normales</label>
+                                            <input
+                                                type="time"
+                                                class="form-control"
+                                                id="HorasNormalesMO"/>
+                                        </div>
+                                    <br></br>
+                                    <div class="col-4">
+                                      <label for="HorasExtraMO" class="control-label">Horas Extraordinarias</label>
+                                      <input
+                                          type="time"
+                                          class="form-control"
+                                          id="HorasExtraMO"/>
+                                  </div>
+
+
+                                    <br></br>
+                                    <br></br>
+                            <div class="col-4">
+                              <label for="HorasExtraDobleMO" class="control-label">Horas Doble Extraordinarias</label>
+                              <input
+                                  type="time"
+                                  class="form-control"
+                                  id="HorasExtraDobleMO"/>
+                          </div>
+                      
+                        
+                                  
+                                   
+                                    <br></br>
+                                <div class="form-group">
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-primary" style="background-color: green;">Confirmar</button> 
+                                        
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        </form>
+                </main>
+    </ui:define>
+
+</ui:composition>

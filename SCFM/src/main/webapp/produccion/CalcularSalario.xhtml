@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+    <ui:define name="content">
+        <main>
+
+<form>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Cálculo de Salario</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item">
+                        <a href="/SCFM/faces/inicio.html">Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item active">Cálculo de salario</li>
+                </ol>
+                
+
+                    <div class="card mb-4">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <p>Empleados: 
+                                    <select id="empleadosSalarios">
+                                        <option>Empleado1</option>
+                                        <option>Empleado2</option>
+                                        <option>Empleado3</option>
+                                        <option>Empleado4</option>
+                                    </select>
+                                </p>
+                                <br></br>
+
+                            </div>
+                            <br></br>
+                            <div class="col-4">
+                                <label for="HorasNormales" class="control-label">Horas Normales</label>
+                                <input
+                                    type="time"
+                                    class="form-control"
+                                    id="HorasNormales"
+                                    placeholder="Horas Normales"/>
+                            </div>
+                            <br></br>
+                            <div class="col-4">
+                                <label for="HorasExtra" class="control-label">Horas Extraordinarias</label>
+                                <input
+                                    type="time"
+                                    class="form-control"
+                                    id="HorasExtra"
+                                    placeholder="Horas Extraordinarias"/>
+                            </div>
+
+
+                            <br></br>
+                            <br></br>
+                            <div class="col-4">
+                                <label for="HorasExtraDoble" class="control-label">Horas  Doble Extraordinarias</label>
+                                <input
+                                    type="time"
+                                    class="form-control"
+                                    id="HorasExtraDoble"
+                                    placeholder="Horas doble Extraordinarias"/>
+                            </div>
+                            <br></br>
+                            <div class="col-4">
+                                <label for="SalarioEmp" class="control-label">Salario</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="SalarioEmp"
+                                    placeholder="Salario"/>
+                            </div>
+
+
+
+                            <br></br>
+                            <div class="form-group">
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-primary" style="background-color: green;">Calcular salario</button> 
+                                </div>
+
+                            </div>
+
+                            
+
+
+                        </div>  
+                    </div>
+
+            </div>
+
+
+</form>
+
+        </main>
+    </ui:define>
+
+</ui:composition>

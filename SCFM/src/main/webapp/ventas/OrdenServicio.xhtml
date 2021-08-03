@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+
+    <ui:define name="content">
+         <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Orden de Servicio</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/SCFM/faces/ventas/inicio.xhtml">Inicio</a></li>
+                            <li class="breadcrumb-item active">Orden de Servicio</li>
+                        </ol>
+                        
+                            <div class="card-body">
+
+                                <div style="text-align: right;">
+
+                                    <button
+                                        type="button"
+                                        onclick="location.href='/SCFM/faces/ventas/NueOrdenServ.xhtml';"
+                                        class="btn btn-success btn-sm">Nueva Orden de Servicio</button>
+                                        <br></br>
+                                        <br></br>
+                        </div>
+
+                                <table id="Tablas" class="table table-striped table-bordered nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Solicitud de Servicio</th>
+                                            <th>Cliente</th>
+                                            <th>Proyecto</th>
+                                            <th>Estado Visita</th>
+                                            <th>Opción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>OS-205</td>
+                                            <td>Juan Solano</td>
+                                            <td>Proyecto Juan Carlos</td>
+                                            <td>Sin Realizar</td>
+                                            <td>
+                                                <div style="text-align: center;">
+                                                <button type="button" onclick="location.href='/SCFM/faces/ventas/EditarOrdenServ.xhtml';" class="btn btn-primary btn-sm">Editar</button>
+                                                
+                                                </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OS-377</td>
+                                            <td>Mariana López</td>
+                                            <td>Proyecto Mariana López</td>
+                                            <td>Realizada</td>
+                                            <td>
+                                                <div style="text-align: center;">
+                                                <button type="button" onclick="location.href='/SCFM/faces/ventas/EditarOrdenServ.xhtml';" class="btn btn-primary btn-sm">Editar</button>
+                                                
+                                                </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OS-398</td>
+                                            <td>Rafael Esquivel</td>
+                                            <td>Proyecto Farmacia RE</td>
+                                            <td>Sin Realizar</td>
+                                            <td>
+                                                <div style="text-align: center;">
+                                                <button type="button" onclick="location.href='/SCFM/faces/ventas/EditarOrdenServ.xhtml';" class="btn btn-primary btn-sm">Editar</button>
+                                                
+                                                </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                    </div>
+                </main>
+    </ui:define>
+
+</ui:composition>

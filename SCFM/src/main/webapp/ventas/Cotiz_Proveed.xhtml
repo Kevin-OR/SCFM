@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+
+    <ui:define name="content">
+         <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Cotización Proveedor</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/SCFM/faces/inicio.xhtml">Inicio</a></li>
+                            <li class="breadcrumb-item active">Cotización Proveedor</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <span style="float: right;"><button class="btn btn-success btn-sm" onclick="location.href='/SCFM/faces/ventas/SubirCotiFinal.xhtml';">Subir Nueva Cotización</button></span>
+                            </div>
+                            <div class="card-body">
+                                <table id="Tablas" class="table table-striped table-bordered nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Código SS</th>
+                                            <th>Cliente</th>
+                                            <th>Opción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>SS-205</td>
+                                            <td>Juan Solano</td>
+                                            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/SubirCotiFinal.xhtml';">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Descargar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>SS-377</td>
+                                            <td>Mariana López</td>
+                                            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/SubirCotiFinal.xhtml';">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Descargar</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>SS-398</td>
+                                            <td>Rafael Esquivel</td>
+                                            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/SubirCotiFinal.xhtml';">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Descargar</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+    </ui:define>
+
+</ui:composition>

@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../resources/templates/plantillaAdmin.xhtml">
+
+
+    <ui:define name="content">
+         <main>
+
+                <form action="" method="post">
+
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Especificaciones O.T</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item">
+                                <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="/SCFM/faces/ventas/OrdenTrabajo.xhtml">Orden de Trabajo</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="/SCFM/faces/ventas/Visualizar_OTVenta.xhtml">Visualizar O.T</a>
+                            </li>
+                            <li class="breadcrumb-item active">Especificaciones O.T</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="col-4">
+                                    <label class="control-label">
+                                        <strong>Orden de Trabajo</strong>
+                                    </label>
+                                    <br></br>
+                                    <p>OT-205</p>
+                                </div>
+                                <span style="float: right;">
+                                    <button class="btn btn-success btn-sm" id="btnRegistrar">Registrar Especificación</button>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-7 col-lg-7 col-md-8 col-sm-7 col-12">
+                                        <label for="txtMaterial">Nombre</label>
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id="txtMaterial"
+                                            class="form-control"
+                                            placeholder="Nombre del material"/>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-4 col-sm-5 col-12">
+                                        <label for="txtPrecio">Tipo</label>
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id="txtPrecio"
+                                            class="form-control"
+                                            placeholder="Precio del material"/>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-4 col-sm-5 col-12">
+                                        <label for="txtPrecio">Descripción</label>
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id="txtPrecio"
+                                            class="form-control"
+                                            placeholder="Precio del material"/>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-4 col-sm-5 col-12">
+                                        <label for="txtPrecio">Notas</label>
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id="txtPrecio"
+                                            class="form-control"
+                                            placeholder="Precio del material"/>
+                                    </div>
+                                </div>
+                                <br></br>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover nowrap">
+                                            <thead>
+                                                <tr class="text-center">
+                                                    <th>Nombre</th>
+                                                    <th>Tipo</th>
+                                                    <th>Descripción</th>
+                                                    <th>Notas</th>
+                                                    <th>Opción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="MaterialesListados">
+                                                <tr>
+                                                    <td>
+                                                        Melanina
+                                                    </td>
+                                                    <td>Muestra</td>
+                                                    <td>Muestra pequeña</td>
+                                                    <td>Color blanco</td>
+                                                    <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Melanina
+                                                    </td>
+                                                    <td>Muestra</td>
+                                                    <td>Muestra pequeña</td>
+                                                    <td>Color blanco</td>
+                                                    <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                <br></br>
+                            <div class="col-9">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-sm">Guardar Especificaciones</button>
+                                <button type="button" class="btn btn-primary btn-sm">Enviar Especificaciones</button>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </form>
+
+                </main>
+    </ui:define>
+
+</ui:composition>
