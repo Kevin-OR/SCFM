@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./resources/templates/plantillaAdmin.xhtml">
+
+    <ui:define name="content">
+                     <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Orden Reparación</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item">
+                            <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item active"></li>
+                    </ol>
+                    
+                        <div class="card-body">
+                            <div style="text-align: right;">
+
+                                <button
+                                    type="button"
+                                    onclick="location.href='/SCFM/faces/NuevaRepa.xhtml';"
+                                    class="btn btn-success btn-sm">Nueva Reparación</button>
+                                    <br></br>
+                                    <br></br>
+                    </div>
+
+                    <table id="Tablas" class="table table-striped table-bordered nowrap">
+                        <thead>
+                            <tr>
+                                <th>Orden de Reparación</th>
+                                <th>Cliente</th>
+                                <th>Proyecto</th>
+                                <th>Estado Instalación</th>
+                                <th>Opción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OR-205</td>
+                                <td>Juan Solano</td>
+                                <td>Proyecto Juan Carlos</td>
+                                <td>Sin Enviar</td>
+                                <td>
+                                    <div style="text-align: center;">
+                                        <button
+                                            type="button"
+                                            onclick="location.href='/SCFM/faces/VerRepa.xhtml';"
+                                            class="btn btn-primary ">Ver</button>
+                                  </div>  
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>OR-377</td>
+                                <td>Mariana López</td>
+                                <td>Proyecto Mariana López</td>
+                                <td>Sin Enviar</td>
+                                <td>
+                                    <div style="text-align: center;">
+                                        <button
+                                            type="button"
+                                            onclick="location.href='/SCFM/faces/VerRepa.xhtml';"
+                                            class="btn btn-primary">Ver</button>
+                                    </div> 
+                                </td>
+                               
+                            </tr>
+                            <tr>
+                                <td>OR-398</td>
+                                <td>Rafael Esquivel</td>
+                                <td>Proyecto Farmacia RE</td>
+                                <td>enviada</td>
+                                <td>
+                                    <div style="text-align: center;">
+                                        <button
+                                            type="button"
+                                            onclick="location.href='/SCFM/faces/VerRepa.xhtml';"
+                                            class="btn btn-primary">Ver</button>
+                                 </div>   
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+    </main>
+    </ui:define>
+
+</ui:composition>
