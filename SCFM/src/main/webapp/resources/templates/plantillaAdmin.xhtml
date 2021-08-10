@@ -3,11 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-          
+
       xmlns:b="http://bootsfaces.net/ui">
-      
+
     <h:head>
-        
+
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta
@@ -74,7 +74,6 @@
 
 
 
-
         </script>
     </h:head>
 
@@ -88,10 +87,12 @@
             <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
                 <!-- Navbar Brand-->
                 <a class="navbar-brand ps-3" style="color: white" href="/SCFM/faces/inicio.xhtml">
-                 <b:image library="images" name="TodoBlanco.png"
-                             style="height: 40px"/>
-                
+                    <h:graphicImage library="images" name="verde.png"  style="width: 120px; height: 54px; "/>
+
+
                 </a>
+
+
 
                 <!-- Sidebar Toggle-->
 
@@ -108,8 +109,89 @@
 
                     </div>
                 </form>
+
+
+
+
+
+
+
+
+
+
                 <!-- Navbar-->
                 <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            id="navbarDropdown"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" style="background: #333333" aria-labelledby="navbarDropdown">
+
+
+                            <div class="noti">
+                                <div class="conte">
+
+
+                                    <div class="texto">
+                                        
+                                        <p>Nueva Solicitud de Servicio
+                                            <a class="texto" href="/SCFM/faces/inicio.xhtml">
+                                            <span>Area de Ventas</span>
+                                        </a>
+                                        </p>
+                                        
+                                        <span class="tiem">10 minutes ago</span>
+                                    </div>
+
+                                </div>
+                                <div class="conte">
+
+                                    
+                                        
+                                        <div class="texto">
+                                       
+                                        <p>Nueva Orden de Servicio
+                                             <a class="texto" href="/SCFM/faces/inicio.xhtml">
+                                            <span>Area de Ventas</span>
+                                        </a>
+                                        </p>
+                                        
+                                        <span class="tiem">15 minutes ago</span>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+                                <div class="conte">
+
+
+                                    <div class="texto">
+                                        
+                                        <p>Nueva Orden de compra
+                                            <a class="texto" href="/SCFM/faces/inicio.xhtml">
+                                            <span>Area de Producción</span>
+                                        </a>
+                                        </p>
+                                        
+                                        <span class="tiem">30 minutes ago</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+
+
+
+
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
@@ -122,7 +204,9 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="/SCFM/faces/index.xhtml">Cerrar Sesión</a>
+                                <a class="dropdown-item"  href="/SCFM/faces/index.xhtml">Cerrar Sesión</a>
+                                <a class="dropdown-item"  href="/SCFM/faces/CambioContra.xhtml">Cambiar contraseña</a>
+
                             </li>
                         </ul>
                     </li>
@@ -170,7 +254,7 @@
                                         <a class="nav-link" href="/SCFM/faces/ventas/SolicitudesServicio.xhtml">Solicitud de Servicio</a>
                                         <a class="nav-link" href="/SCFM/faces/ventas/DiseñosFinales.xhtml">Subir Diseño Final</a>
                                         <a class="nav-link" href="/SCFM/faces/ventas/Cotizacion.xhtml">Cotización</a>
-                                        <a class="nav-link" href="/SCFM/faces/ventas/Cotiz_Proveed.xhtml">Precio de Venta</a>
+                                        <a class="nav-link" href="/SCFM/faces/ventas/PrecioVenta.xhtml">Precio Venta</a>
                                         <a class="nav-link" href="/SCFM/faces/ventas/OrdenTrabajo.xhtml">Orden de trabajo</a>
                                         <a class="nav-link" href="/SCFM/faces/ventas/Cotiz_Proveed.xhtml">Cotización del Provedor</a>
                                     </nav>
@@ -197,7 +281,7 @@
                                     aria-labelledby="headingOne"
                                     data-bs-parent="#sidenavAccordion">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/SCFM/faces/produccion/CompraMateriales.xhtml">Orden de Compra</a>
+                                        <a class="nav-link" href="/SCFM/faces/produccion/OrdenesCompra.xhtml">Orden de Compra</a>
                                         <a class="nav-link" href="/SCFM/faces/produccion/MenuCronograma.xhtml">Cronograma</a>
                                         <a class="nav-link" href="/SCFM/faces/produccion/ManodeObra.xhtml">Mano de Obra</a>
                                         <a class="nav-link" href="/SCFM/faces/produccion/OrdenTrabajoPro.xhtml">Orden de Trabajo</a>

@@ -14,47 +14,18 @@
                                 <li class="breadcrumb-item">
                                     <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                                 </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/SCFM/faces/produccion/OrdenTrabajoPro.xhtml">Órdenes de Trabajo</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/SCFM/faces/produccion/Ver_OT.xhtml">Visualizar O.T</a>
+                                </li>
                                 <li class="breadcrumb-item active">Materiales</li>
                             </ol>
                             <div class="card mb-4">
                             
                             <div class="card-body">
-                                <table id="Tablas" class="table table-striped table-bordered nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre</th>
-                                        
-                                            <th>Cantidad</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Melamina </td>
-                                   
-                                            <td>20</td>
-                                               
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>Madera</td>
-                                          
-                                            <td>20</td>
-                                           
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>Granito</td>
-                                          
-                                            <td>20</td>
-                                          
-                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <br></br>
-
-                                <div class="col-4">
+                                 <div class="col-4">
                                     <label for="OrdenTrabajoMate" class="control-label">Orden de Trabajo</label>
                                     <input
                                         type="text"
@@ -96,12 +67,59 @@
                                         <br></br>
                                         <div class="form-group">
                                             <div class="col-4">
-                                                <button type="submit" class="btn btn-primary" style="background-color: green;">Confirmar selección</button> 
-                                                <button type="button" onclick="location.href='/SCFM/faces/produccion/CompraMateriales.html';" class="btn btn-secondary" style="background-color: green;">Enviar Compra</button> 
+                                                <button type="submit" class="btn btn-primary" style="background-color: green;">Agregar Material</button> 
+                                                
 
                                             </div>
                                            
                                         </div>
+                                        <br></br>
+                                <table id="Tablas" class="table table-striped table-bordered nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                        
+                                            <th>Cantidad</th>
+                                            
+                                            <th>Opción</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Melamina </td>
+                                   
+                                            <td>20</td>
+                                               
+                                            <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Madera</td>
+                                          
+                                            <td>20</td>
+                                           
+                                            <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Granito</td>
+                                          
+                                            <td>20</td>
+                                          
+                                            <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               <br></br>
+                                        <div class="form-group">
+                                            <div class="col-4">
+                                                <button type="submit" class="btn btn-primary" style="background-color: green;">Confirmar selección</button> 
+                                                <button type="button" onclick="location.href='/SCFM/faces/produccion/CompraMateriales.xhtml';" class="btn btn-secondary" style="background-color: green;">Enviar Compra</button> 
+
+                                            </div>
+                                           
+                                        </div>
+
+                               
                                        
                                     </div>
                                 </div>

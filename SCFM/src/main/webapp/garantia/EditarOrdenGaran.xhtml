@@ -10,21 +10,24 @@
                 <form action="" method="post">
 
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Editar Orden de Garantia</h1>
+                        <h1 class="mt-4">Editar Orden de Garantía</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item">
                                 <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                             </li>
-                            <li class="breadcrumb-item active">Actualizar inventario</li>
+                            <li class="breadcrumb-item">
+                                <a href="/SCFM/faces/garantia/OrdenGarantia.xhtml">Orden de Garantía</a>
+                            </li>
+                            <li class="breadcrumb-item active">Editar Orden de Garantía</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
 
                                 <!-- Full Name -->
                                 <div class="col-4">
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                   <option selected="0" >Orden de Trabajo</option>
-                                   <option value="1">OT-205</option>
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" disabled="true">
+                                   <option>Orden de Trabajo</option>
+                                   <option value="1" selected="selected">OT-205</option>
                                    <option value="2">OT-377</option>
                                    <option value="3">OT-398</option>
                                  </select>
@@ -33,10 +36,10 @@
                                     <div class="col-4">
                                         <select
                                             class="form-select form-select mb-3"
-                                            aria-label=".form-select-lg example">
-                                            <option selected="selected">Visitante 1</option>
+                                            aria-label=".form-select-lg example" disabled="true">
+                                            <option>Visitante 1</option>
                                             <option value="1">Empleado 1</option>
-                                            <option value="2">Empleado 2</option>
+                                            <option value="2" selected="selected" >Empleado 2</option>
                                             <option value="3">Empleado 3</option>
                                         </select>
                                     </div>
@@ -44,9 +47,9 @@
                                     <div class="col-4">
                                         <select
                                             class="form-select form-select mb-3"
-                                            aria-label=".form-select-lg example">
-                                            <option selected="selected" style="background-color: gray">Visitante 2</option>
-                                            <option value="1">Arquitecto 1</option>
+                                            aria-label=".form-select-lg example" disabled="true">
+                                            <option style="background-color: gray">Visitante 2</option>
+                                            <option value="1" selected="selected">Arquitecto 1</option>
                                             <option value="2">Arquitecto 2</option>
                                             <option value="3">Arquitecto 3</option>
                                         </select>
@@ -61,7 +64,7 @@
                                         class="form-control"
                                         id="NombreCliente"
                                         required="required"
-                                        Value="Calle Luisa Garza, 40, Casa 2">Calle Luisa Garza, 40, Casa 2</textarea>
+                                        disabled="true">Calle Luisa Garza, 40, Casa 2</textarea>
                                     <br></br>
                             </div>
 
@@ -74,7 +77,8 @@
                                         class="form-control"
                                         id="PriApellCliente"
                                         name="full_name"
-                                        value="2021-07-22"></input>
+                                        value="2021-07-22"
+                                        readonly="readonly"></input>
                                 </div>
                                 <div class="col-3">
                                     <label for="PriApellCliente" class="control-label">Hora de Visita</label>
@@ -84,7 +88,8 @@
                                         id="PriApellCliente"
                                         name="full_name"
                                         value="07:30"
-                                        required="required"></input>
+                                        required="required"
+                                        readonly="readonly"></input>
                                 </div>
 
                                 
@@ -93,6 +98,7 @@
 
                                 <br></br>
                             <div>
+                                <button type="button" class="btn btn-primary" onclick="habilitarCampos()">Editar</button>
                                 <button
                                     type="button"
                                     

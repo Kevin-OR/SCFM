@@ -24,7 +24,12 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
-
+function habilitarCampos(){
+    $("input").removeAttr("readonly");
+    $("input").removeAttr("disabled");
+    $("select").removeAttr("disabled");
+    $("textarea").removeAttr("disabled");
+};
 document.getElementById('DiseñoFinalSoli').onchange=function(e){
     let reader=new FileReader();
     reader.readAsDataURL(e.target.files[0]);
@@ -41,6 +46,7 @@ document.getElementById('DiseñoFinalSoli').onchange=function(e){
 
                             var Materiales;
                             $('#mainRealizarCoti').ready(main());
+                            
 
                             function main() {
                                 BotonesFunc();

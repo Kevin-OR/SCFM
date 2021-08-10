@@ -14,14 +14,20 @@
                             <h1 class="mt-4">Visualizar O.T</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item">
-                                    <a href="/SCFM/face/inicio.xhtml">Inicio</a>
+                                    <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="/SCFM/face/ventas/OrdenTrabajo.xhtml">Órdenes de Trabajo</a>
+                                    <a href="/SCFM/faces/ventas/OrdenTrabajo.xhtml">Órdenes de Trabajo</a>
                                 </li>
                                 <li class="breadcrumb-item active">Visualizar O.T</li>
                             </ol>
                             <div class="card mb-4">
+                                <div class="card-header">
+                                <span style="float: right;"><button
+                                                type="button"
+                                                class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/Especif_OT.xhtml';">Ver Especificaciones</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Enviar O.T</button></span>
+                            </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-4">
@@ -65,15 +71,26 @@
                                     <br></br>
                                     <div class="form-group">
                                         <div class="col-9">
-                                            <button
-                                                type="button"
-                                                class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/Especif_OT.xhtml';">Ver Especificaciones</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Enviar O.T</button>
+                                            <button type="button" class="btn btn-success btn-sm">Aceptar O.T</button>
+                                    <button
+                                    type="button" class="btn btn-danger btn-sm" data-bs-toggle="collapse" data-bs-target="#Rechac_OT" aria-expanded="false" aria-controls="Rechac_OT">Rechazar O.T
+                                </button> 
         
                                         </div>
 
                                     </div>
+                                    <br></br>
+                                     <div class="collapse" id="Rechac_OT">
                                 
+                                <label for="Justif_Rech_OT" class="control-label">Justificación del rechazo de la O.T</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Justif_Rech_OT"
+                                    placeholder="Escriba razón del rechazo"/>
+                                    <br></br>
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar Justificación</button>  
+                            </div>
                             </div>
                         </div>
                     </div>

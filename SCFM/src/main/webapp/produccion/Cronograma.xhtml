@@ -16,61 +16,37 @@
                                 <li class="breadcrumb-item">
                                     <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                                 </li>
-                                <li class="breadcrumb-item active">Crear Cronograma</li>
+                                <li class="breadcrumb-item">
+                                    <a href="/SCFM/faces/produccion/MenuCronograma.xhtml">Cronogramas</a>
+                                </li>
+                                <li class="breadcrumb-item active">Elaborar Cronograma</li>
                             </ol>
                            
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <button type="button" onclick="location.href='/SCFM/faces/produccion/MenuCronograma.xhtml';" class="btn btn-primary btn-sm">Volver</button>
                                     </div>
-                                    <div class="card-body">
-
-                                       
-                                        <table id="Tablas" class="table table-striped table-bordered nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th>Empleado Asigando</th>
-                                                    <th>Nombre de la Tarea</th>
-                                                    <th>Fecha Finalización</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Empleado1</td>
-                                                    <td>Pintura</td>
-                                                    <td>23/6/2021</td>
-                                                   
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td>Empleado2</td>
-                                                    <td>Poner patas</td>
-                                                    <td>21/9/2021</td>
-                                                   
-                                                </tr>
-                                                <tr>
-                                                    <td>Empleado3</td>
-                                                    <td>Barnisar</td>
-                                                    <td>21/9/2021</td>
-                                     
-                                                    
-                                                  
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div>
-
-                                <div class="container-fluid">
+                                    <div class="container-fluid">
                                  
                                     <div class="card-body">
                                         <div class="row">
-                                          
+                                          <div class="col-4">
+                                                          
+                                                <label for="start">Orden de Trabajo</label>
+        
+                                                <select class="form-control" aria-label=".form-select-lg example">
+                                    <option selected="selected">Seleccionar O.T</option>
+                                    <option value="1">OT-205</option>
+                                    <option value="2">OT-377</option>
+                                    <option value="3">OT-398</option>
+                                </select>
+                                            
+                                        </div>
                                               <div class="col-4">
                                                           
                                                 <label for="start">Fecha de finalización</label>
         
-                                                <input type="date" id="start" name="trip-start"
+                                                <input type="date" id="start" name="trip-start" class="form-control"
                                                        value="2018-07-22"
                                                        min="2018-01-01" max="2025-12-31"/>
                                             
@@ -104,27 +80,60 @@
                                       <div class="col-2">
                                           <br></br>
                                         
-                                        <button type="button" class="btn btn-success " style="background-color: green;">Guardar</button> 
+                                        <button type="button" class="btn btn-success " style="background-color: green;">Agregar</button> 
                                         
                                     </div>
                                       </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                    <div class="card-body">
+
+                                       
+                                        <table id="Tablas" class="table table-striped table-bordered nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Empleado Asigando</th>
+                                                    <th>Nombre de la Tarea</th>
+                                                    <th>Fecha Finalización</th>
+                                                    <th>Opción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Empleado1</td>
+                                                    <td>Pintura</td>
+                                                    <td>23/6/2021</td>
+                                                    <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>Empleado2</td>
+                                                    <td>Poner patas</td>
+                                                    <td>21/9/2021</td>
+                                                    <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Empleado3</td>
+                                                    <td>Barnisar</td>
+                                                    <td>21/9/2021</td>
+                                                    <td><input type='button' class='borrar btn btn-primary' value='Eliminar'/></td>
+                                                    
+                                                  
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <br></br>
                                         <div class="form-group">
                                             <div class="col-4">
                                                 <button type="button" class="btn btn-success " onclick="location.href='/SCFM/faces/produccion/MenuCronograma.xhtml';" style="background-color: green;">Guardar Cronograma</button> 
-                                                <button type="button" class="btn btn-success "  style="background-color: green;">Eliminar</button> 
                                                 
                                             </div>
                                            
                                         </div>
-                                        
                                     </div>
-                                </div>
-
-        
-                            
-                                    
-                                
+   
                             </div>
                             </div>
                         

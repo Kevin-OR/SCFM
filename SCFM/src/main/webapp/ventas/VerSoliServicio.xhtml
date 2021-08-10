@@ -14,263 +14,302 @@
                         <h1 class="mt-4">Solicitud de Servicio</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item">
-                                <a href="/SCFM/face/inicio.xhtml">Inicio</a>
+                                <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="/SCFM/face/ventas/SolicitudesServicio.xhtml">Solicitud de Servicio</a>
+                                <a href="/SCFM/faces/ventas/SolicitudesServicio.xhtml">Solicitud de Servicio</a>
                             </li>
                             <li class="breadcrumb-item active">Visualizar S.S</li>
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Nombre Cliente</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Juan</p>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Primer Apellido</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Solano</p>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Segundo Apellido</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Romero</p>
-                                    </div>
+                            <div class="card-header">
+                                <span style="float: right;"><button type="button" class="btn btn-primary">Enviar Solicitud</button></span>
+                            </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="NombreCliente" class="control-label">Nombre</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="NombreCliente"
+                                        value="Juan" readonly="readonly"></input>
                                 </div>
 
-                                <br></br>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Cédula</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>1-3454-9901</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Número de Teléfono</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>85672903</p>
-                                    </div>
+                                <div class="col-4">
+                                    <label for="PriApellCliente" class="control-label">Primer Apellido</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="PriApellCliente"
+                                        value="Solano" readonly="readonly"/>
                                 </div>
-                                    <br></br>
 
+                                <div class="col-4">
+                                    <label for="SegApellCliente" class="control-label">Segundo Apellido</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="SegApellCliente"
+                                        value="Romero" readonly="readonly"/>
+                                </div>
+                            </div>
+
+
+                            <br></br>
+                            <div class="row">
+                                <div class="col-4">
+                                    <select id="inputCedula" class="custom-select" disabled="true">
+                                        <option>Cédula</option>
+                                        <option value="1" selected="selected">Física</option>
+                                        <option value="2">Jurídica</option>
+                                        <option value="3">DIMEX</option>
+                                    </select>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="CedulaClient"
+                                        value="1-3453-9901" readonly="readonly"/>
+                                </div>
+                                <div class="col-4">
+                                    <label for="TelCliente" class="control-label">Número de Teléfono</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="TelCliente"
+                                        value="85672903" readonly="readonly"/>
+                                </div>
+                            </div>
+                            <br></br>
+
+                            <div class="form-group">
+                                <label for="DireccInstal" class="control-label">Dirección</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="DireccInstal"
+                                    value="250 mts norte de las torres eléctricas de Calle Vieja" readonly="readonly"/>
+                            </div>
+                            <br></br>
+                            <div class="form-group">
+                                <label for="CantidadMuebles" class="control-label">Cantidad Muebles</label>
+                                <input type="number" class="form-control" id="CantidadMuebles" value="1" readonly="readonly"/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-4">
+                                    <label for="TipoMueble" class="control-label">Tipo de mueble</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="TipoMueble"
+                                        value="Escritorio" readonly="readonly"/>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="EspacioTratar" class="control-label">Espacio a tratar</label>
+                                        <select class="form-control" id="EspacioTratar" disabled="true">
+                                            <option>Seleccionar</option>
+                                            <option value="1">Hogar</option>
+                                            <option value="2" selected="selected">Oficina</option>
+                                            <option value="3">Area comercial</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="AreaEspacio" class="control-label">Area de Espacio</label>
+                                        <select class="form-control" id="AreaEspacio" disabled="true">
+                                            <option>Seleccionar</option>
+                                            <option value="1">Cocina</option>
+                                            <option value="2">Closet</option>
+                                            <option value="3">Baños</option>
+                                            <option value="4" selected="selected">Oficinas</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br></br>
+
+                            <div class="form-group">
+                                <label for="TipoModelo" class="control-label">Tipo de modelo</label>
+                                <input type="text" class="form-control" id="TipoModelo" value="Escritorio de computadora" readonly="readonly"/>
+                            </div>
+                            <br></br>
+                            <div class="form-group">
+                                <label for="CantidadDiseño" class="control-label">Cantidad Diseño</label>
+                                <input type="number" class="form-control" id="CantidadDiseño" value="1" readonly="readonly"/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-4">
+                                    <label for="TipoMaterial" class="control-label">Tipo de Material</label>
+                                    <select class="form-control" id="TipoMaterial" disabled="true">
+                                        <option>Seleccionar</option>
+                                        <option value="1">Madera</option>
+                                        <option value="2">Granito</option>
+                                        <option value="3" selected="selected">Melamina</option>
+                                        <option value="4">Cuarzo</option>
+                                        <option value="5">Marmol</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="ColorSoli" class="control-label">Color</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="ColorSoli"
+                                            value="Blanco" readonly="readonly"/>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="DiseñoFinalSoli" class="control-label">Diseño cliente</label>
+                                        <input
+                                            type="file"
+                                            class="form-control"
+                                            id="DiseñoFinalSoli"
+                                            accept=".jpg, .png, .jpeg" multiple="multiple" disabled="true"/>
+                                        <br></br>
+                                        <div id="preview" class="styleImage"><img src="../resources/images/Asset 15.png" alt=""/></div>
+                                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br></br>
+                            <div class="form-group">
+                                <label for="Not_Dise_Clie" class="control-label">Notas Diseño</label>
+                                <input type="text" class="form-control" id="Not_Dise_Clie" value="2 cajones del lado derecho y un espacio al final para poder guardar libros" readonly="readonly"/>
+                            </div>
+
+
+                            <br></br>
+                            <div class="form-group">
+                                <label for="CantidadMedidas" class="control-label">Cantidad Medidas</label>
+                                <input type="number" class="form-control" id="CantidadMedidas" value="1" readonly="readonly"/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label for="Descrip_Soli" class="control-label">Descripcion</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Descrip_Soli"
+                                    value="Medidas uniformes" readonly="readonly"/>
+                            </div>
+
+                            <br></br>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="MedidasAltoMueble" class="control-label">Medidas alto</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasAltoMueble"
+                                        value="750mm" readonly="readonly"/>
+                                </div>
+
+                                <div class="col-4">
+                                    <label for="MedidasAnchoMueble" class="control-label">Medidas ancho</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasAnchoMueble"
+                                        value="1200mm" readonly="readonly"/>
+                                </div>
+                                <div class="col-4">
+                                    <label for="MedidasFondoMueble" class="control-label">Medidas Fondo</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasFondoMueble"
+                                        value="550mm" readonly="readonly"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
                                 <div class="form-group">
-                                    <label class="control-label">
-                                        <strong>Dirección</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>250 mts norte de las torres eléctricas de Calle Vieja</p>
-                                </div>
-                                    <br></br>
-
-                                <div class="col-4">
-                                    <label class="control-label">
-                                        <strong>Cantidad Muebles</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>1</p>
+                                    <label for="TipoElemento" class="control-label">Tipo Elemento</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="TipoElemento"
+                                        value="Cajones" readonly="readonly"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Tipo de mueble</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Escritorio</p>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Espacio a tratar</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Oficina</p>
-
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Área de Espacio</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Oficinas</p>
-
-                                    </div>
-
+                            <br></br>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="MedidasAltoElemento" class="control-label">Medidas alto</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasAltoElemento"
+                                        value="140mm" readonly="readonly"/>
                                 </div>
-                                <br></br>
 
                                 <div class="col-4">
-                                    <label class="control-label">
-                                        <strong>Tipo de Modelo</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>Escritorio de computadora</p>
-
+                                    <label for="MedidasAnchoElemento" class="control-label">Medidas ancho</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasAnchoElemento"
+                                        value="410mm" readonly="readonly"/>
                                 </div>
-                                <br></br>
                                 <div class="col-4">
-                                    <label class="control-label">
-                                        <strong>Cantidad de diseño</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>1</p>
-
+                                    <label for="MedidasFondoElemento" class="control-label">Medidas Fondo</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="MedidasFondoElemento"
+                                        value="525mm" readonly="readonly"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Tipo de Material</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Melanina</p>
-
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Color</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Blanco</p>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label for="Dise_Clien" class="control-label">
-                                            <strong>Diseño Cliente</strong>
-                                        </label>
-                                        <div id="Dise_Clien" class="styleImage"><img width="250px" src="Imagenes/Farcry5Venta.jpg"/></div>
-                                    </div>
-                                </div>
-                                <br></br>
-                                <div class="form-group">
-                                    <label class="control-label">
-                                        <strong>Notas Diseño</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>2 cajones del lado derecho y un espacio al final para poder guardar libros</p>
-                                </div>
-
-                                <br></br>
-                                
-                                <div class="col-4">
-                                    <label class="control-label">
-                                        <strong>Cantidad de Medidas</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>1</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-body">
-
-                                <div class="form-group">
-                                    <label class="control-label">
-                                        <strong>Descripción</strong>
-                                    </label>
-                                    <br></br>
-                                    <p>Medidas Uniformes</p>
-                                </div>
-
-                                <br></br>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Medidas Alto</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>750mm</p>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Medidas Ancho</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>1200mm</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Medidas Fondos</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>550mm</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label class="control-label">
-                                            <strong>Tipo de Elemento</strong>
-                                        </label>
-                                        <br></br>
-                                        <p>Cajones</p>
-                                    </div>
-                                </div>
-                                <br></br>
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <label class="control-label">
-                                                <strong>Medidas Alto</strong>
-                                            </label>
-                                            <br></br>
-                                            <p>140mm</p>
-                                        </div>
-
-                                        <div class="col-4">
-                                            <label class="control-label">
-                                                <strong>Medidas Ancho</strong>
-                                            </label>
-                                            <br></br>
-                                            <p>410mm</p>
-                                        </div>
-                                        <div class="col-4">
-                                            <label class="control-label">
-                                                <strong>Medidas Fondo</strong>
-                                            </label>
-                                            <br></br>
-                                            <p>525mm</p>
-                                        </div>
-                                    </div>
-                                <br></br>
+                            <br></br>
+                            
                                 <div class="col-9">
-                                    <button
-                                        type="button"
-                                        class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/CrearSoliServicio.xhtml';">Editar Solicitud</button>
-                                    <button type="button" class="btn btn-primary btn-sm">Enviar Solicitud</button>
-
+                                    
+                                    <button type="button" class="btn btn-primary" onclick="habilitarCampos()">Editar Solicitud</button>
+                                    
+                                    <button type="button" class="btn btn-primary">Guardar Solicitud</button>
                                 </div>
-                            </div>
+
+                            
+
                         </div>
+                    </div>
                     </div>
 
                 </form>

@@ -4,14 +4,13 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./../resources/templates/plantillaAdmin.xhtml">
 
-
     <ui:define name="content">
-         <main>
+        <main>
 
                     <form action="" method="post">
 
                         <div class="container-fluid px-4">
-                            <h1 class="mt-4">Definir Costos</h1>
+                            <h1 class="mt-4">Ver Precio Venta</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item">
                                     <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
@@ -19,36 +18,36 @@
                                 <li class="breadcrumb-item">
                                     <a href="/SCFM/faces/ventas/PrecioVenta.xhtml">Precio Venta</a>
                                 </li>
-                                <li class="breadcrumb-item active">Definir Costos</li>
+                                <li class="breadcrumb-item active">Ver Precio Venta</li>
                             </ol>
                             <div class="card mb-4">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-4">
-                                            <label for="CostoTotal_Material" class="control-label">Costo total de material</label>
+                                            <label for="CostoTotal_Material" class="control-label"><strong>Costo total de material</strong></label>
                                             <input
                                                 type="number"
                                                 class="form-control"
                                                 id="CostoTotal_Material"
-                                                placeholder="Carga Precio Total de Cotización"/>
+                                                value="25000" readonly="readonly"/>
                                         </div>
 
                                         <div class="col-4">
-                                            <label for="Estim_Mano_Obra" class="control-label">Estimación de Mano de obra</label>
+                                            <label for="Estim_Mano_Obra" class="control-label"><strong>Estimación de Mano de obra</strong></label>
                                             <input
                                                 type="number"
                                                 class="form-control"
                                                 id="Estim_Mano_Obra"
-                                                placeholder="Carga automáticamente"/>
+                                                value="30000" readonly="readonly"/>
                                         </div>
 
                                         <div class="col-4">
-                                            <label for="Estim_Plazo_Entrega" class="control-label">Estimación de Plazo de entrega</label>
+                                            <label for="Estim_Plazo_Entrega" class="control-label"><strong>Estimación de Plazo de entrega</strong></label>
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 id="Estim_Plazo_Entrega"
-                                                placeholder="Escribir estimado de entrega"/>
+                                                value="22 días" readonly="readonly"/>
                                         </div>
                                     </div>
 
@@ -56,37 +55,49 @@
                                     <div class="row">
                                 
                                         <div class="col-4">
-                                            <label for="Descuento" class="control-label">Descuento</label>
+                                            <label for="Descuento" class="control-label"><strong>Descuento</strong></label>
                                             <input
                                                 type="number"
                                                 class="form-control"
                                                 id="Descuento"
-                                                placeholder="Opcional"/>
+                                                value="5000" readonly="readonly"/>
                                         </div>
                                         <div class="col-4">
-                                            <label for="CostosAgre" class="control-label">Costos Agregados</label>
+                                            <label for="CostosAgre" class="control-label"><strong>Costos Agregados</strong></label>
                                             <input
                                                 type="number"
                                                 class="form-control"
                                                 id="CostosAgre"
-                                                placeholder="Opcional"/>
+                                                value="0" readonly="readonly"/>
                                         </div>
                                     </div>
+                                    
                                     <br></br>
-                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#CalculoPrecio" aria-expanded="false" aria-controls="CalculoPrecio">Calcular Precio</button>
-                                    <br></br>
-                                    <br></br>
-                                    <div class="collapse" id="CalculoPrecio">
-                                
-                                        <label for="TotalPrecio" class="control-label">Precio de Venta</label>
+                                    
+                                <div class="col-4">
+                                    <label for="TotalPrecio" class="control-label"><strong>Precio de Venta</strong></label>
                                         <input
                                             type="number"
                                             class="form-control"
                                             id="TotalPrecio"
                                             value="60000" readonly="readonly"/>
                                         <br></br>
-                                            <button type="button" class="btn btn-primary btn-sm">Enviar Precio de Venta</button>  
-                                    </div>
+                                            <button type="button" class="btn btn-success btn-sm">Aceptar Precio de Venta</button> 
+                                            <button type="button" class="btn bg-danger btn-sm" data-bs-toggle="collapse" data-bs-target="#Div_Rechazo" aria-expanded="false" aria-controls="Div_Rechazo">Rechazar Precio de Venta</button> 
+                                     </div>
+                                    <br/>
+                                    <div class="collapse" id="Div_Rechazo">
+
+                                <label for="Justif_Rech_Precio" class="control-label" >Justificación del rechazo de calidad</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="Justif_Rech_Precio"
+                                    name="Just_Rechazo"
+                                    placeholder="Escriba razón del rechazo"/>
+                                <br/>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="location.href='/SCFM/faces/ventas/PrecioVenta.xhtml';">Confirmar Rechazo</button>  
+                            </div>
                                 </div>
                             </div>
                     </div>

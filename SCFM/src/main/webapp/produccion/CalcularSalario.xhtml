@@ -12,7 +12,8 @@
                 <h1 class="mt-4">Cálculo de Salario</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item">
-                        <a href="/SCFM/faces/inicio.html">Inicio</a>
+                        <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
+                        <li class="breadcrumb-item"><a href="/SCFM/faces/produccion/ManodeObra.xhtml">Mano de Obra</a></li>
                     </li>
                     <li class="breadcrumb-item active">Cálculo de salario</li>
                 </ol>
@@ -37,31 +38,31 @@
                             <div class="col-4">
                                 <label for="HorasNormales" class="control-label">Horas Normales</label>
                                 <input
-                                    type="time"
+                                    type="number"
                                     class="form-control"
                                     id="HorasNormales"
-                                    placeholder="Horas Normales"/>
+                                    value="2" readonly="readonly"/>
                             </div>
                             <br></br>
                             <div class="col-4">
                                 <label for="HorasExtra" class="control-label">Horas Extraordinarias</label>
                                 <input
-                                    type="time"
+                                    type="number"
                                     class="form-control"
                                     id="HorasExtra"
-                                    placeholder="Horas Extraordinarias"/>
+                                    value="3" readonly="readonly"/>
                             </div>
 
 
-                            <br></br>
+            
                             <br></br>
                             <div class="col-4">
                                 <label for="HorasExtraDoble" class="control-label">Horas  Doble Extraordinarias</label>
                                 <input
-                                    type="time"
+                                    type="number"
                                     class="form-control"
                                     id="HorasExtraDoble"
-                                    placeholder="Horas doble Extraordinarias"/>
+                                    value="4.5" readonly="readonly"/>
                             </div>
                             <br></br>
                             <div class="col-4">
@@ -70,7 +71,7 @@
                                     type="text"
                                     class="form-control"
                                     id="SalarioEmp"
-                                    placeholder="Salario"/>
+                                    value="5500" readonly="readonly"/>
                             </div>
 
 
@@ -78,13 +79,11 @@
                             <br></br>
                             <div class="form-group">
                                 <div class="col-4">
-                                    <button type="submit" class="btn btn-primary" style="background-color: green;">Calcular salario</button> 
+                                    <button type="button" onclick="habilitarCampos()" class="btn btn-primary" style="background-color: green;" >Calcular Salario</button> 
                                 </div>
 
                             </div>
-
                             
-
 
                         </div>  
                     </div>
