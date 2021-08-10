@@ -14,7 +14,10 @@
                         <li class="breadcrumb-item">
                             <a href="/SCFM/faces/inicio.xhtml">Inicio</a>
                         </li>
-                        <li class="breadcrumb-item active">Actualizar inventario</li>
+                        <li class="breadcrumb-item">
+                            <a href="/SCFM/faces/inventario/InvenPersonal.xhtml">Inventario de Personal</a>
+                        </li>
+                        <li class="breadcrumb-item active">Nuevo Personal</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-body">
@@ -95,8 +98,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <label for="SegApellCliente" class="control-label">Puesto</label>
+                            <div class="row">
+                                 <div class="col-4">
+                                <label for="SegApellCliente" class="control-label">Rol</label>
                                 <select class="form-select form-select- mb-3" aria-label=".form-select-lg example">
                                     <option selected="selected">Seleccionar</option>
                                     <option value="1">Administrador</option>
@@ -105,39 +109,32 @@
                                     <option value="3">Empleado</option>
                                 </select>
                             </div>
-                            <div class="row">
-
-
-                                <div class="col-4">
-                                    <label for="NombreCliente" class="control-label">Nombre Usuario</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="NombreCliente"
-                                        name="full_name"
-                                        placeholder="Ingresar Nombre de Usuario"
-                                        required="required"/>
-                                </div>
-
-                                <div class="col-4">
+                            
+                            
+                            <div class="col-4">
                                     <!-- Full Name -->
-                                    <label for="PriApellCliente" class="control-label">Contraseña</label>
+                                    <label for="SegApellCliente" class="control-label">Salario por hora</label>
                                     <input
-                                        type="password"
+                                        type="number"
                                         class="form-control"
-                                        id="PriApellCliente"
+                                        id="SegApellCliente"
                                         name="full_name"
-                                        placeholder="Ingresar Contraseña"
-                                        required="required"/>
-                                </div>
+                                        placeholder="Ingresar cuanto gana por hora"
+                                        required="requiered"/>
 
+                                </div>
+                                
+                                
+                                
                             </div>
+                           
+                           
                             <br></br>
                             <div>
                                 <input
                                     type="submit"
                                     value="Agregar"
-                                    onclick="location.href = '/SCFM/faces/acceso/InvenAcceso.xhtml';"
+                                    onclick="location.href = '/SCFM/faces/inventario/InvenPersonal.xhtml';"
                                     class="btn btn-success btn-sm"/>
                             </div>
 

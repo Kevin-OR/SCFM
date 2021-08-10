@@ -5,102 +5,210 @@
                 template="./resources/templates/plantillaAdmin.xhtml">
 
     <ui:define name="content">
-         <main>
+        <main>
 
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Inicio</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Inicio</li>
-                    </ol>
-                    <div class="row">
-                        
-                        <div class="col-xl-6 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">Ventas</div>
-                                <div class="card-footer  justify-content-between">
-                                    <div
-                                        class="card-body"
-                                        style="border-width: 1pt; border-style: solid;
-                                    border-color: rgb(196, 196, 233);">
-                                        <div class="small text-white" style="text-align: right;">
-                                            <p>02:14</p>
-                                        </div>
-                                        <h5>Solicitud de Servicio</h5>
-                                        <p>SS-205 ¡Nueva solicitud de servicio disponible!</p>
-                                        <div class="small text-white" style="text-align: right;">
-                                            <a href="SolicitudesServicio.html" class="link-light">ventas</a>
-                                        </div>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Inicio</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Inicio</li>
+                </ol>
 
-                                    </div>
-                                    <br></br>
-                                <div
-                                    class="card-body"
-                                    style="border-width: 1pt; border-style: solid;
-                                    border-color: rgb(196, 196, 233);">
-                                    <div class="small text-white" style="text-align: right;">
-                                        <p>02:14</p>
-                                    </div>
-                                    <h5>Solicitud de Servicio</h5>
-                                    <p>SS-205 ¡Nueva solicitud de servicio disponible!</p>
-                                    <div class="small text-white" style="text-align: right;">
-                                        <a href="SolicitudesServicio.html" class="link-light">ventas</a>
-                                    </div>
 
-                                </div>
+                <div class="buzo">
+
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#Noti_Venta" aria-expanded="false" aria-controls="Noti_Venta">Venta</a>
+                    <div class="dropdowns collapse" id="Noti_Venta">
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Alex commented on<span>Timeline Share</span></p>
+                                <span class="notify_time">10 minutes ago</span>
+
+
+
+
                             </div>
+                            <button class="btn bg-primarynoti">Aceptar</button>
+                            <button class="btn bg-dangerNoti">Rechazar</button>
+
+
+                        </div>
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva Orden de Trabajo<span>OT-205</span></p>
+                                <span class="notify_time" >hace un momento</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/ventas/Visualizar_OTVenta.xhtml';">ver</button>
+
+                        </div>
+
+
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva solicitud de servicio<span>SS-205</span></p>
+                                <span class="notify_time" >hace 3 horas</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/ventas/VerSoliServicio.xhtml';">ver</button>
+
+                        </div>
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva cotización<span>SS-205</span></p>
+                                <span class="notify_time">hace 3 minutos</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/ventas/VerCotizacion.xhtml';">ver</button>
+
+                        </div>
+
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva Orden de Servicio<span>OS-205</span></p>
+                                <span class="notify_time">hace 5 días</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/ventas/EditarOrdenServ.xhtml';">ver</button>
+
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="card bg-warning text-white mb-4">
-                            <div class="card-body">Producción</div>
-                            <div class="card-footer  justify-content-between">
-                                
+
+
+
+
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#Noti_Produc" aria-expanded="false" aria-controls="Noti_Produc">Producción</a>
+                    <div class="dropdowns collapse" id="Noti_Produc">
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva Orden de Trabajo<span>OT-205</span></p>
+                                <span class="notify_time" >hace 5 minutos</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/produccion/Ver_OT.xhtml';">ver</button>
+
+                        </div>
+
+
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva solicitud de Compra de materiales<span>OT-325</span></p>
+                                <span class="notify_time" >hace 3 horas</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/produccion/CompraMateriales.xhtml';">ver</button>
+
+                        </div>
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva Orden de Reparación<span>OR-205</span></p>
+                                <span class="notify_time" >hace un momento</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/VerRepa.xhtml';">ver</button>
+
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-md-6">
-                    <div class="card bg-success text-white mb-4">
-                        <div class="card-body">Logistica</div>
-                        <div class="card-footer  justify-content-between">
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#Noti_Cali" aria-expanded="false" aria-controls="Noti_Cali">Calidad</a>
+                    <div class="dropdowns collapse" id="Noti_Cali">
+                        
+
+
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva solicitud de proceso de calidad<span>OT-205</span></p>
+                                <span class="notify_time" >hace 3 horas</span>
+                            </div>
+                            <button class="btn bg-primarynoti">Aceptar</button>
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/calidad/RevisarCalidad.xhtml';">ver</button>
+
+                        </div>
+                        
+
+
+
                             
                     </div>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#Noti_Logis" aria-expanded="false" aria-controls="Noti_Logis">Logistica</a>
+                    <div class="dropdowns collapse" id="Noti_Logis">
+                        <div class="notify_item">
+                        <div class="notify_info">
+                                <p>Nueva solicitud de ingreso al area de logistica<span>OT-205</span></p>
+                                <span class="notify_time" >hace 3 horas</span>
+                            </div>
+                            <button class="btn bg-primarynoti">Aceptar</button>
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/calidad/RevisarCalidad.xhtml';">ver</button>
+
+                        </div>
+                        
+                       
                     </div>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#Noti_Garan" aria-expanded="false" aria-controls="Noti_Garan">Garantia</a>
+                    <div class="dropdowns collapse" id="Noti_Garan">
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Terminó garantia<span>OT-377</span></p>
+                                <span class="notify_time" >hace un momento</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/ventas/Visualizar_OTVenta.xhtml';">ver</button>
+
+                        </div>
+
+
+                        <div class="notify_item">
+
+
+
+                            <div class="notify_info">
+                                <p>Nueva solicitud de Garantia<span>OG-205</span></p>
+                                <span class="notify_time" >hace 3 horas</span>
+                            </div>
+
+                            <button class="btn btn-successnoti" onclick="location.href = '/SCFM/faces/garantia/EditarOrdenGaran.xhtml';">ver</button>
+
+                        </div>
+                        
+                    </div>
+
+
+
+
                 </div>
-                <div class="col-xl-6 col-md-6">
-                    <div class="card bg-danger text-white mb-4">
-                        <div class="card-body">Calidad</div>
-                        <div class="card-footer  justify-content-between">
-                            
-                    </div>
-                    </div>
-                </div>
+
+
 
             </div>
-
-            <div class="row">
-                <div class="col-xl-6 col-md-6">
-                    <div class="card bg-dark text-white mb-4" >
-                        <div class="card-body">Logistica</div>
-                        <div class="card-footer  justify-content-between">
-                            
-                    </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6">
-                    <div class="card bg-info text-white mb-4">
-                        <div class="card-body">Calidad</div>
-                        <div class="card-footer  justify-content-between">
-                            
-                    </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </main>
+        </main>
     </ui:define>
 
 </ui:composition>
